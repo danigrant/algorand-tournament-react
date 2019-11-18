@@ -1,10 +1,10 @@
-import AppContainer from '../components/AppContainer'
-import Header from '../components/Header'
+import AppContainer from '../../components/AppContainer'
+import Header from '../../components/Header'
 import YouTube from 'react-youtube';
 import { withRouter } from 'next/router'
 
 const Learn = props => {
-  const { router } = this.props
+  const { router } = props
   return (
     <div>
       <Header />

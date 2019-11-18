@@ -6,7 +6,7 @@ const Header = props => (
       <div className="link inline-block font-weight-bold margin-left-med">Discover Algo</div>
     </Link>
     <div className="float-right inline-block">
-      <Link href="/learn">
+      <Link href="/learn/forfun">
         <div className="link inline-block margin-right-med">Learn</div>
       </Link>
       <Link href="/competition/6">

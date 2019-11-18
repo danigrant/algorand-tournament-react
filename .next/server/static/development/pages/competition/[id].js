@@ -168,7 +168,7 @@ const Header = props => __jsx("div", {
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/learn",
+  href: "/learn/forfun",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 9
