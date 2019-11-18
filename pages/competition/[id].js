@@ -84,7 +84,7 @@ class SubmitSolutionPage extends React.Component {
         <div>
           <Header />
           <AppContainer>
-            <p className="margin-top-lrg font-color-yellow font-weight-bold">Solve The Diophantine Equation for 114</p>
+            <p className="margin-top-lrg font-color-yellow font-weight-bold">Solve The Diophantine Equation for {this.state.selectedCompetition}</p>
             <form>
               <p className="margin-top-med font-weight-bold">Which integer are you submitting a solution for?</p>
               <select onChange={this.handleCompetitionSelectChange} name="competition-select">
