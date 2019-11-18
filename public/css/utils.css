@@ -70,13 +70,16 @@
   padding-right: 7px;
   width: fit-content;
   min-width: 100px;
+  background: #FFEB39;
 }
 
 .button:hover, .link:hover {
-  filter: brightness(110%);
+  filter: brightness(90%);
+  cursor: pointer;
 }
 
-.link {
+.button:active, .link:active {
+  filter: brightness(80%);
   cursor: pointer;
 }
 
@@ -141,7 +144,7 @@
 }
 
 .margin-top-none {
-  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .margin-top-sml {

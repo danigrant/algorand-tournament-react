@@ -10700,20 +10700,21 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx("p", {
-        className: "margin-top-med font-weight-bold",
+        className: "margin-bottom-none margin-top-med font-weight-bold",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18
         },
         __self: this
       }, "Submit answer to the diophantine puzzle a\xB3 + b\xB3 + c\xB3 = 114"), __jsx("p", {
+        className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 19
         },
         __self: this
       }, "What three integers can you sum the cubes of to get 114?"), __jsx("div", {
-        className: "columns-parent-div",
+        className: "margin-top-med columns-parent-div",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
@@ -10800,20 +10801,21 @@ function (_React$Component) {
         },
         __self: this
       }))), __jsx("p", {
-        className: "font-weight-bold",
+        className: "margin-bottom-none font-weight-bold",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44
         },
         __self: this
       }, "If you\u2019ve found the solution, we\u2019ll send you the 32 Algos in the escrow prize pool."), __jsx("p", {
+        className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
         },
         __self: this
       }, "What is your Algorand address?"), __jsx("input", {
-        className: "rounded-border green-border background-light-blue",
+        className: "margin-top-sml rounded-border green-border background-light-blue",
         type: "text",
         __source: {
           fileName: _jsxFileName,
@@ -10821,27 +10823,35 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("p", {
-        className: "font-weight-bold",
+        className: "margin-bottom-none font-weight-bold",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
         },
         __self: this
       }, "What should we call you when we display you on the leaderboard?"), __jsx("p", {
+        className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 48
         },
         __self: this
       }, "What is your name?"), __jsx("input", {
-        className: "rounded-border green-border background-light-blue",
+        className: "margin-top-sml rounded-border green-border background-light-blue",
         type: "text",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 49
         },
         __self: this
-      }))));
+      })), __jsx("div", {
+        className: "button font-color-dark-blue rounded-border center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Submit!")));
     }
   }]);
 
@@ -10852,7 +10862,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcompetition%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fdanigrant%2FProjects%2Falgorand-react%2Fpages%2Fcompetition%2F%5Bid%5D.js ***!
   \***************************************************************************************************************************************************************************/
@@ -10875,5 +10885,5 @@ module.exports = dll_9aaf654d4f8f592c0a05;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
