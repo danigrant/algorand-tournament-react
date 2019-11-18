@@ -2,7 +2,7 @@ import AppContainer from '../components/AppContainer'
 import Header from '../components/Header'
 import YouTube from 'react-youtube';
 
-const LearnPage = props => {
+const Learn = props => {
   return (
     <div>
       <Header />
@@ -24,4 +24,4 @@ const LearnPage = props => {
   )
 }
 
-export default LearnPage
+export default Learn
