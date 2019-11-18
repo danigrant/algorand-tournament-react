@@ -179,7 +179,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Header = function Header(props) {
   return __jsx("div", {
-    className: "font-color-green margin-top-med",
+    className: "header-width font-color-green margin-top-med",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4

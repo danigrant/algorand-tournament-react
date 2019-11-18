@@ -58,11 +58,23 @@ iframe {
     margin-left: 15px;
   }
   .header-items {
-    width: 95%;
     color: #808080;
   }
   .header-items div {
     margin-right: 15px;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-width {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+
+  .header-items {
+    float: left;
+    margin-left: 15px;
   }
 }
