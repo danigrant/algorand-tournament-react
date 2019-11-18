@@ -1,5 +1,5 @@
-import AppContainer from '../components/AppContainer'
-import Header from '../components/Header'
+import AppContainer from '../../components/AppContainer'
+import Header from '../../components/Header'
 import { withRouter } from 'next/router'
 
 const Leaderboard = props => {
