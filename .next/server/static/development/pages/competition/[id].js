@@ -109,7 +109,7 @@ var _jsxFileName = "/Users/danigrant/Projects/algorand-react/components/AppConta
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const AppContainer = props => __jsx("div", {
-  className: "constrained-width margin-top-lrg",
+  className: "constrained-width margin-top-lrg margin-bottom-lrg",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 2
@@ -2009,58 +2009,51 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
         lineNumber: 15
       },
       __self: this
-    }, __jsx("div", {
-      className: "constrained-width-sml margin-top-xtr",
+    }, __jsx("p", {
+      className: "margin-top-lrg font-color-yellow font-weight-bold",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 16
       },
       __self: this
-    }, __jsx("p", {
-      className: "font-color-yellow font-weight-bold",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: this
     }, "Solve The Diophantine Equation for 114"), __jsx("form", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 17
       },
       __self: this
     }, __jsx("p", {
       className: "margin-top-med font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 18
       },
       __self: this
     }, "Submit answer to the diophantine puzzle a\xB3 + b\xB3 + c\xB3 = 114"), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 19
       },
       __self: this
     }, "What three integers can you sum the cubes of to get 114?"), __jsx("div", {
       className: "columns-parent-div",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 20
       },
       __self: this
     }, __jsx("div", {
       className: "column-30-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 21
       },
       __self: this
     }, "Integer a:"), __jsx("div", {
       className: "column-70-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 24
       },
       __self: this
     }, __jsx("input", {
@@ -2068,28 +2061,28 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
       type: "number",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 25
       },
       __self: this
     }))), __jsx("div", {
       className: "columns-parent-div",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       },
       __self: this
     }, __jsx("div", {
       className: "column-30-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 29
       },
       __self: this
     }, "Integer b:"), __jsx("div", {
       className: "column-70-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 32
       },
       __self: this
     }, __jsx("input", {
@@ -2097,28 +2090,28 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
       type: "number",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 33
       },
       __self: this
     }))), __jsx("div", {
       className: "columns-parent-div",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 36
       },
       __self: this
     }, __jsx("div", {
       className: "column-30-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 37
       },
       __self: this
     }, "Integer c:"), __jsx("div", {
       className: "column-70-p",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 40
       },
       __self: this
     }, __jsx("input", {
@@ -2126,20 +2119,20 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
       type: "number",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 41
       },
       __self: this
     }))), __jsx("p", {
       className: "font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 44
       },
       __self: this
     }, "If you\u2019ve found the solution, we\u2019ll send you the 32 Algos in the escrow prize pool."), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 45
       },
       __self: this
     }, "What is your Algorand address?"), __jsx("input", {
@@ -2147,20 +2140,20 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
       type: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 46
       },
       __self: this
     }), __jsx("p", {
       className: "font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 47
       },
       __self: this
     }, "What should we call you when we display you on the leaderboard?"), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, "What is your name?"), __jsx("input", {
@@ -2168,10 +2161,10 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Co
       type: "text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 49
       },
       __self: this
-    })))));
+    }))));
   }
 
 }

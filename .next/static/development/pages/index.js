@@ -17,7 +17,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var AppContainer = function AppContainer(props) {
   return __jsx("div", {
-    className: "constrained-width margin-top-lrg",
+    className: "constrained-width margin-top-lrg margin-bottom-lrg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 2
@@ -10590,7 +10590,7 @@ var Index = function Index() {
     },
     __self: this
   }, __jsx("p", {
-    className: "margin-top-xtr font-weight-bold font-color-green",
+    className: "margin-top-lrg font-weight-bold font-color-green",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10

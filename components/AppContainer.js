@@ -1,5 +1,5 @@
 const AppContainer = props => (
-  <div className="constrained-width margin-top-lrg">
+  <div className="constrained-width margin-top-lrg margin-bottom-lrg">
     {props.children}
   </div>
 );

@@ -109,7 +109,7 @@ var _jsxFileName = "/Users/danigrant/Projects/algorand-react/components/AppConta
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const AppContainer = props => __jsx("div", {
-  className: "constrained-width margin-top-lrg",
+  className: "constrained-width margin-top-lrg margin-bottom-lrg",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 2
@@ -2139,7 +2139,7 @@ const Index = () => __jsx("div", {
   },
   __self: undefined
 }, __jsx("p", {
-  className: "margin-top-xtr font-weight-bold font-color-green",
+  className: "margin-top-lrg font-weight-bold font-color-green",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 10
