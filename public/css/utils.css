@@ -70,6 +70,16 @@
   margin: 0 auto;
 }
 
+.center-on-desktop-not-mobile {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .center-on-desktop-not-mobile {
+    text-align: left;
+  }
+}
+
 .button {
   box-sizing: border-box;
   text-align: center;

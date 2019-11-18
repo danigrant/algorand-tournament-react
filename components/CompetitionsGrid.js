@@ -1,10 +1,6 @@
 import Link from 'next/link'
 const competitions = [
   {
-    "number":6,
-    "escrow_addr":"QQSJBNFSTXLT5KKXSZRXLKQSW7MCHNEJM7ABKT6R7SZPD4ASUYJDJFWW3U"
-  },
-  {
     "number":114,
     "escrow_addr":"77UY3RJHIYUVTRJ6EUR3KK2JF5LD2IXAD3VYH6TBT364G7VSAATJLXWCDQ"
   },
