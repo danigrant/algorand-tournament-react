@@ -84,12 +84,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
   height: 100%;
 }
 
 .columns-parent-div .column-30-p {
   width: 29%;
+  max-width: 120px;
 }
 
 .columns-parent-div .column-70-p {

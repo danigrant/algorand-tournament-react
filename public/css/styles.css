@@ -29,3 +29,15 @@ p {
   padding-bottom: 0;
   padding-left: 20px;
 }
+
+input {
+  height: 30px;
+  width: 100%;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  position: relative;
+  top: -8px;
+  margin-bottom: 20px;
+}
