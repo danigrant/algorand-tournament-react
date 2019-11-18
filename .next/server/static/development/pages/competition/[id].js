@@ -215,6 +215,17 @@ const Header = props => __jsx("div", {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
@@ -1999,34 +2010,110 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_AppContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/AppContainer */ "./components/AppContainer.js");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Header */ "./components/Header.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_AppContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/AppContainer */ "./components/AppContainer.js");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Header */ "./components/Header.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+
 
 var _jsxFileName = "/Users/danigrant/Projects/algorand-react/pages/competition/[id].js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 
 
-class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   constructor(props) {
     super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleSubmit", () => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleCompetitionSelectChange", e => {
       this.setState({
-        isSubmitted: true
+        selectedCompetition: e.target.value
       });
     });
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleIntegerAChange", e => {
+      this.setState({
+        integerA: e.target.value
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleIntegerBChange", e => {
+      this.setState({
+        integerB: e.target.value
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleIntegerCChange", e => {
+      this.setState({
+        integerC: e.target.value
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleAlgorandAddressChange", e => {
+      this.setState({
+        algorandAddress: e.target.value
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleNameChange", e => {
+      this.setState({
+        submitterName: e.target.value
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "handleEmailChange", e => {
+      this.setState({
+        submitterEmail: e.target.value
+      });
+    });
+
+    const {
+      router
+    } = this.props;
     this.state = {
-      isSubmitted: false
+      isSubmitted: false,
+      selectedCompetition: router.query.id,
+      integerA: 0,
+      integerB: 0,
+      integerC: 0,
+      algorandAddress: "",
+      submitterName: "",
+      submitterEmail: "",
+      submitResponse: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  async handleSubmit() {
+    this.setState({
+      isSubmitted: true
+    });
+    let res = await fetch(`https://algorand-tournament-server.herokuapp.com/competition/${this.state.selectedCompetition}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+        a: this.state.integerA,
+        b: this.state.integerB,
+        c: this.state.integerC,
+        algorandAddress: this.state.algorandAddress,
+        submitterName: this.state.submitterName,
+        submitterEmail: this.state.submitterEmail
+      })
+    });
+    let json = await res.json();
+    this.setState({
+      submitResponse: json
+    });
+    console.log(json);
   }
 
   render() {
@@ -2038,199 +2125,308 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Co
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 84
         },
         __self: this
-      }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 85
         },
         __self: this
-      }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 86
         },
         __self: this
       }, __jsx("p", {
         className: "margin-top-lrg font-color-yellow font-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 87
         },
         __self: this
       }, "Solve The Diophantine Equation for 114"), __jsx("form", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 88
         },
         __self: this
       }, __jsx("p", {
-        className: "margin-bottom-none margin-top-med font-weight-bold",
+        className: "margin-top-med font-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 89
+        },
+        __self: this
+      }, "Which integer are you submitting a solution for?"), __jsx("select", {
+        onChange: this.handleCompetitionSelectChange,
+        name: "competition-select",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, __jsx("option", {
+        selected: this.state.selectedCompetition == 6,
+        value: "6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
+      }, "6"), __jsx("option", {
+        selected: this.state.selectedCompetition == 114,
+        value: "114",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, "114"), __jsx("option", {
+        selected: this.state.selectedCompetition == 165,
+        value: "165",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, "165"), __jsx("option", {
+        selected: this.state.selectedCompetition == 390,
+        value: "390",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        },
+        __self: this
+      }, "390"), __jsx("option", {
+        selected: this.state.selectedCompetition == 579,
+        value: "579",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, "579"), __jsx("option", {
+        selected: this.state.selectedCompetition == 627,
+        value: "627",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }, "627"), __jsx("option", {
+        selected: this.state.selectedCompetition == 633,
+        value: "633",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, "633"), __jsx("option", {
+        selected: this.state.selectedCompetition == 732,
+        value: "732",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, "732"), __jsx("option", {
+        selected: this.state.selectedCompetition == 906,
+        value: "906",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }, "906"), __jsx("option", {
+        selected: this.state.selectedCompetition == 921,
+        value: "921",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        },
+        __self: this
+      }, "921"), __jsx("option", {
+        selected: this.state.selectedCompetition == 975,
+        value: "975",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        },
+        __self: this
+      }, "975")), __jsx("p", {
+        className: "margin-bottom-none font-weight-bold",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
         },
         __self: this
       }, "Submit answer to the diophantine puzzle a\xB3 + b\xB3 + c\xB3 = 114"), __jsx("p", {
         className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 104
         },
         __self: this
       }, "What three integers can you sum the cubes of to get 114?"), __jsx("div", {
         className: "margin-top-med columns-parent-div",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 105
         },
         __self: this
       }, __jsx("div", {
         className: "column-30-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 106
         },
         __self: this
       }, "Integer a:"), __jsx("div", {
         className: "column-70-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 109
         },
         __self: this
       }, __jsx("input", {
+        onChange: this.handleIntegerAChange,
         className: "rounded-border green-border background-light-blue",
         type: "number",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 110
         },
         __self: this
       }))), __jsx("div", {
         className: "columns-parent-div",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 113
         },
         __self: this
       }, __jsx("div", {
         className: "column-30-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 114
         },
         __self: this
       }, "Integer b:"), __jsx("div", {
         className: "column-70-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 117
         },
         __self: this
       }, __jsx("input", {
+        onChange: this.handleIntegerBChange,
         className: "rounded-border green-border background-light-blue",
         type: "number",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 118
         },
         __self: this
       }))), __jsx("div", {
         className: "columns-parent-div",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 121
         },
         __self: this
       }, __jsx("div", {
         className: "column-30-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 122
         },
         __self: this
       }, "Integer c:"), __jsx("div", {
         className: "column-70-p",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 125
         },
         __self: this
       }, __jsx("input", {
+        onChange: this.handleIntegerCChange,
         className: "rounded-border green-border background-light-blue",
         type: "number",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 126
         },
         __self: this
       }))), __jsx("p", {
         className: "margin-bottom-none font-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 129
         },
         __self: this
       }, "If you\u2019ve found the solution, we\u2019ll send you the 32 Algos in the escrow prize pool."), __jsx("p", {
         className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 130
         },
         __self: this
       }, "What is your Algorand address?"), __jsx("input", {
+        onChange: this.handleAlgorandAddressChange,
         className: "margin-top-sml rounded-border green-border background-light-blue",
         type: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 131
         },
         __self: this
       }), __jsx("p", {
         className: "margin-bottom-none font-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 132
         },
         __self: this
       }, "What should we call you when we display you on the leaderboard?"), __jsx("p", {
         className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 133
         },
         __self: this
       }, "What is your name?"), __jsx("input", {
+        onChange: this.handleNameChange,
         className: "margin-top-sml rounded-border green-border background-light-blue",
         type: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 134
         },
         __self: this
       }), __jsx("p", {
         className: "margin-bottom-none font-weight-bold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 135
         },
         __self: this
       }, "It may take a little bit to verify but we'll email you when we're done."), __jsx("p", {
         className: "margin-top-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 136
         },
         __self: this
       }, "What is your email?"), __jsx("input", {
+        onChange: this.handleEmailChange,
         className: "margin-top-sml rounded-border green-border background-light-blue",
         type: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 137
         },
         __self: this
       })), __jsx("div", {
@@ -2238,7 +2434,7 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Co
         className: "button font-color-dark-blue rounded-border center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 139
         },
         __self: this
       }, "Submit!")));
@@ -2246,34 +2442,34 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Co
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 145
         },
         __self: this
-      }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 146
         },
         __self: this
-      }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 147
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 148
         },
         __self: this
-      }, "woot!")));
+      }, "woot!"), _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(this.state.submitResponse)));
     }
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(SubmitSolutionPage));
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(SubmitSolutionPage));
 
 /***/ }),
 
@@ -2286,6 +2482,17 @@ class SubmitSolutionPage extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Co
 
 module.exports = __webpack_require__(/*! /Users/danigrant/Projects/algorand-react/pages/competition/[id].js */"./pages/competition/[id].js");
 
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 

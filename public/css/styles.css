@@ -15,6 +15,11 @@ p {
   line-height: 150%;
 }
 
+select {
+  outline: 0;
+  height: 20px;
+}
+
 .competition-grid-wrapper {
   display: flex;
   flex-direction: row;
