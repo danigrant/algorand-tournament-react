@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -121,138 +121,6 @@ const AppContainer = props => __jsx("div", {
 
 /***/ }),
 
-/***/ "./components/CompetitionsGrid.js":
-/*!****************************************!*\
-  !*** ./components/CompetitionsGrid.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/danigrant/Projects/algorand-react/components/CompetitionsGrid.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const competitions = [{
-  "number": 6,
-  "escrow_addr": "QQSJBNFSTXLT5KKXSZRXLKQSW7MCHNEJM7ABKT6R7SZPD4ASUYJDJFWW3U"
-}, {
-  "number": 114,
-  "escrow_addr": "77UY3RJHIYUVTRJ6EUR3KK2JF5LD2IXAD3VYH6TBT364G7VSAATJLXWCDQ"
-}, {
-  "number": 165,
-  "escrow_addr": "NGEASWTLTEK6OUYN7RZBVEZ7B7JHZPQAUDRX4ZPW65NBLE3YNCZYXSKGXA"
-}, {
-  "number": 390,
-  "escrow_addr": "5YKX62DKK3UCKJ3FSCS5FQ67YSFMOE4HTEZLJUUHNWJ5G4GRVEDFWTJ3XE"
-}, {
-  "number": 579,
-  "escrow_addr": "TIZ3CAWJ3ZIILE44GG7Y2E2TKD2DANO4UIC3PZGNUBOFUWDSSU34OVC4WU"
-}, {
-  "number": 627,
-  "escrow_addr": "UJNNFAK5KEHANPV4PQVXV7L5NTMTQT7YOWEOSRYF4OEDGFHJRHMEIA46OE"
-}, {
-  "number": 633,
-  "escrow_addr": "7GC6XERPHLJYJD74M5AMWJ4BJY3QOS66KOJ6SLEUP4DSLCIRRMNAQRGRUE"
-}, {
-  "number": 732,
-  "escrow_addr": "ROBZMNVTF5EBMP4AQVFBEKQR6VOKS65V6LS632PNPBOCHWX45XTJ3ATGLU"
-}, {
-  "number": 906,
-  "escrow_addr": "O52IBHEHCMCVNE7SJ7LD3K6HPMS5ODZPSINHCIM4YP6JSYIM3BX3QCNI54"
-}, {
-  "number": 921,
-  "escrow_addr": "UF2GR3437BNDI6HL5R2AGP3C2HFDSQF3EXHXXL2AKNRWYQU6Q5GINPSVUU"
-}, {
-  "number": 975,
-  "escrow_addr": "NE2KRDSM43K75TEP2SMHDMQS4E7R5NOTLB45B4PHOSZZMSK4HPXA2MWOVI"
-}];
-
-const CompetitionsGrid = props => {
-  return __jsx("div", {
-    className: "competition-grid-wrapper margin-top-lrg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, competitions.map(c => {
-    return __jsx("div", {
-      className: "competition-card background-light-blue green-border rounded-border margin-bottom-med",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: undefined
-    }, __jsx("p", {
-      className: "font-color-grey",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: undefined
-    }, __jsx("span", {
-      className: "font-color-yellow font-weight-bold",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: undefined
-    }, c.number), " = a\xB3 + b\xB3 + c\xB3"), __jsx("p", {
-      className: "font-color-grey",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: undefined
-    }, "Prize Pool: ", __jsx("span", {
-      className: "font-color-white",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: undefined
-    }, "0 Algos")), __jsx("p", {
-      className: "margin-bottom-none font-color-yellow font-size-sml",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: undefined
-    }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
-      className: "margin-top-none font-color-grey font-size-sml",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: undefined
-    }, "send algos to this addr to increase the prize pool"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: `/competition/${c.number}`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: undefined
-    }, __jsx("p", {
-      className: "font-color-grey link",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: undefined
-    }, "Submit Answer >")));
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (CompetitionsGrid);
-
-/***/ }),
-
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -286,14 +154,14 @@ const Header = props => __jsx("div", {
   },
   __self: undefined
 }, __jsx("div", {
-  className: "link inline-block font-weight-bold margin-left-med",
+  className: "logo link inline-block font-weight-bold margin-left-med",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
 }, "Discover Algo")), __jsx("div", {
-  className: "float-right inline-block",
+  className: "header-items float-right inline-block",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8
@@ -2092,10 +1960,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/leaderboard/[id].js":
+/*!***********************************!*\
+  !*** ./pages/leaderboard/[id].js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2103,86 +1971,191 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_AppContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AppContainer */ "./components/AppContainer.js");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var _components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/CompetitionsGrid */ "./components/CompetitionsGrid.js");
-var _jsxFileName = "/Users/danigrant/Projects/algorand-react/pages/index.js";
+/* harmony import */ var _components_AppContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/AppContainer */ "./components/AppContainer.js");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Header */ "./components/Header.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/danigrant/Projects/algorand-react/pages/leaderboard/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const Index = () => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, __jsx("div", {
-  className: "constrained-width-sml center",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}, __jsx("p", {
-  className: "margin-top-lrg font-weight-bold font-color-green",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Diophantine Equations take the form a\xB3 + b\xB3 + c\xB3 = d. There are known diophantine equations for most real numbers under 1,000 (or it is known that there is no solution for that number). There are only 10 left to be solved."), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, "In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct diophantine equation to each address gets all of the algos in the contract."), __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-})));
+const Leaderboard = props => {
+  const {
+    router
+  } = props;
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "margin-top-lrg font-color-yellow font-weight-bold",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "Leaderboard"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, "114:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "165:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, "390:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, "579:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "627:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "633:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, "732:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, "906:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, "921:"), " still unsolved"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, __jsx("span", {
+    className: "font-weight-bold font-color-green",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "975:"), " still unsolved")));
+};
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Leaderboard));
 
 /***/ }),
 
 /***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/*!*****************************************!*\
+  !*** multi ./pages/leaderboard/[id].js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/danigrant/Projects/algorand-react/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/danigrant/Projects/algorand-react/pages/leaderboard/[id].js */"./pages/leaderboard/[id].js");
 
 
 /***/ }),
@@ -2275,6 +2248,17 @@ module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -2331,4 +2315,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=[id].js.map

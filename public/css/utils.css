@@ -48,6 +48,15 @@
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .constrained-width {
+    max-width: 90%;
+  }
+  .constrained-width-sml {
+    max-width: 90%;
+  }
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -97,6 +106,25 @@
 
 .columns-parent-div .column-70-p {
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns-parent-div {
+    display: block;
+  }
+  .columns-parent-div .column-30-p {
+    width: 90%;
+  }
+  .columns-parent-div .column-70-p {
+    max-width: 90%;
+  }
+  input {
+    top: 5px !important;
+    max-width: 90%;
+  }
+  select {
+    background: #fff;
+  }
 }
 
 .margin-left-sml {

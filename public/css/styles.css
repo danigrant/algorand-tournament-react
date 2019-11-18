@@ -48,3 +48,21 @@ input {
   margin-bottom: 20px;
   outline: 0;
 }
+
+iframe {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-left: 15px;
+  }
+  .header-items {
+    width: 95%;
+    color: #808080;
+  }
+  .header-items div {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+}

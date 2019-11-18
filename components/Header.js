@@ -3,9 +3,9 @@ import Link from 'next/link'
 const Header = props => (
   <div className="font-color-green margin-top-med">
     <Link href="/">
-      <div className="link inline-block font-weight-bold margin-left-med">Discover Algo</div>
+      <div className="logo link inline-block font-weight-bold margin-left-med">Discover Algo</div>
     </Link>
-    <div className="float-right inline-block">
+    <div className="header-items float-right inline-block">
       <Link href="/learn/forfun">
         <div className="link inline-block margin-right-med">Learn</div>
       </Link>

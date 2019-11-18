@@ -154,14 +154,14 @@ const Header = props => __jsx("div", {
   },
   __self: undefined
 }, __jsx("div", {
-  className: "link inline-block font-weight-bold margin-left-med",
+  className: "logo link inline-block font-weight-bold margin-left-med",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
 }, "Discover Algo")), __jsx("div", {
-  className: "float-right inline-block",
+  className: "header-items float-right inline-block",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8

@@ -64,14 +64,14 @@ var Header = function Header(props) {
     },
     __self: this
   }, __jsx("div", {
-    className: "link inline-block font-weight-bold margin-left-med",
+    className: "logo link inline-block font-weight-bold margin-left-med",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
   }, "Discover Algo")), __jsx("div", {
-    className: "float-right inline-block",
+    className: "header-items float-right inline-block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
