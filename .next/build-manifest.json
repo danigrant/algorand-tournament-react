@@ -27,14 +27,6 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/leaderboard": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/learn": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
