@@ -1,0 +1,9 @@
+html, body {
+    height:100%;
+}
+
+body {
+  font-family: IBM Plex Mono;
+  background-image: linear-gradient(180deg, #313745 0%, #001025 100%);
+  color: white;
+}
