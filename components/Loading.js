@@ -6,7 +6,7 @@ const Loading = props => {
     <div>
       <Header />
       <AppContainer>
-        <p>Loading ...</p>
+        <p></p>
       </AppContainer>
     </div>
   )

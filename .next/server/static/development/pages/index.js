@@ -137,118 +137,79 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/danigrant/Projects/algorand-react/components/CompetitionsGrid.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
- // const competitions = [
-//   {
-//     "number":114,
-//     "escrow_addr":"77UY3RJHIYUVTRJ6EUR3KK2JF5LD2IXAD3VYH6TBT364G7VSAATJLXWCDQ"
-//   },
-//   {
-//     "number":165,
-//     "escrow_addr":"NGEASWTLTEK6OUYN7RZBVEZ7B7JHZPQAUDRX4ZPW65NBLE3YNCZYXSKGXA"
-//   },
-//   {
-//     "number":390,
-//     "escrow_addr":"5YKX62DKK3UCKJ3FSCS5FQ67YSFMOE4HTEZLJUUHNWJ5G4GRVEDFWTJ3XE"
-//   },
-//   {
-//     "number":579,
-//     "escrow_addr":"TIZ3CAWJ3ZIILE44GG7Y2E2TKD2DANO4UIC3PZGNUBOFUWDSSU34OVC4WU"
-//   },
-//   {
-//     "number":627,
-//     "escrow_addr":"UJNNFAK5KEHANPV4PQVXV7L5NTMTQT7YOWEOSRYF4OEDGFHJRHMEIA46OE"
-//   },
-//   {
-//     "number":633,
-//     "escrow_addr":"7GC6XERPHLJYJD74M5AMWJ4BJY3QOS66KOJ6SLEUP4DSLCIRRMNAQRGRUE"
-//   },
-//   {
-//     "number":732,
-//     "escrow_addr":"ROBZMNVTF5EBMP4AQVFBEKQR6VOKS65V6LS632PNPBOCHWX45XTJ3ATGLU"
-//   },
-//   {
-//     "number":906,
-//     "escrow_addr":"O52IBHEHCMCVNE7SJ7LD3K6HPMS5ODZPSINHCIM4YP6JSYIM3BX3QCNI54"
-//   },
-//   {
-//     "number":921,"escrow_addr":"UF2GR3437BNDI6HL5R2AGP3C2HFDSQF3EXHXXL2AKNRWYQU6Q5GINPSVUU"
-//   },
-//   {
-//     "number":975,
-//     "escrow_addr":"NE2KRDSM43K75TEP2SMHDMQS4E7R5NOTLB45B4PHOSZZMSK4HPXA2MWOVI"
-//   }
-// ]
+
 
 const CompetitionsGrid = props => {
   return __jsx("div", {
     className: "competition-grid-wrapper margin-top-lrg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 5
     },
     __self: undefined
-  }, props.competitions.map(c => {
+  }, props.competitions.map((c, index) => {
     return __jsx("div", {
+      key: index,
       className: "competition-card background-light-blue green-border rounded-border margin-bottom-med",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 9
       },
       __self: undefined
     }, __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 10
       },
       __self: undefined
     }, __jsx("span", {
       className: "font-color-yellow font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 10
       },
       __self: undefined
     }, c.number), " = a\xB3 + b\xB3 + c\xB3"), __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 11
       },
       __self: undefined
     }, "Prize Pool: ", __jsx("span", {
       className: "font-color-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 11
       },
       __self: undefined
     }, "0 Algos")), __jsx("p", {
       className: "margin-bottom-none font-color-yellow font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 12
       },
       __self: undefined
     }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
       className: "margin-top-none font-color-grey font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 13
       },
       __self: undefined
     }, "send algos to this addr to increase the prize pool"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: `/competition/${c.number}`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 14
       },
       __self: undefined
     }, __jsx("p", {
       className: "font-color-grey link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 15
       },
       __self: undefined
     }, "Submit Answer >")));
@@ -397,7 +358,7 @@ const Loading = props => {
       lineNumber: 9
     },
     __self: undefined
-  }, "Loading ...")));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Loading);
@@ -2190,74 +2151,64 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   render() {
-    if (!this.state.competitions.length) {
-      return __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      });
-    } else {
-      return __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "constrained-width-sml center-on-desktop-not-mobile",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }, __jsx("p", {
-        className: "margin-top-lrg font-weight-bold font-color-green",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, "Diophantine Equations take the form a\xB3 + b\xB3 + c\xB3 = d. There are known diophantine equations for most real numbers under 1,000 (or it is known that there is no solution for that number). There are only 10 left to be solved."), __jsx("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, "In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct diophantine equation to each address gets all of the algos in the contract."), __jsx("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        competitions: this.state.competitions,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      })));
-    }
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "constrained-width-sml center-on-desktop-not-mobile",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, __jsx("p", {
+      className: "margin-top-lrg font-weight-bold font-color-green",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "Diophantine Equations take the form a\xB3 + b\xB3 + c\xB3 = d. There are known diophantine equations for most real numbers under 1,000 (or it is known that there is no solution for that number). There are only 10 left to be solved."), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, "In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct diophantine equation to each address gets all of the algos in the contract."), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), this.state.competitions.length > 0 && __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      competitions: this.state.competitions,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    })));
   }
 
 }
@@ -2276,7 +2227,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 const firebase = __webpack_require__(/*! firebase */ "firebase");
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyCcpy1r2a5s99VAM4D4nLhYKhjmERRBriU",
   authDomain: "algorand-tournament.firebaseapp.com",
   databaseURL: "https://algorand-tournament.firebaseio.com",
   projectId: "algorand-tournament",
