@@ -63833,28 +63833,6 @@ if (!firebase.apps.length) {
 var db = firebase.firestore();
 var competitionsRef = db.collection('competitions');
 
-function saveSolutionToDB() {
-  return _saveSolutionToDB.apply(this, arguments);
-} // let snapshot = await usersRef.where('email', '==', email).get()
-
-
-function _saveSolutionToDB() {
-  _saveSolutionToDB = _asyncToGenerator(
-  /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee() {
-    return _regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return _saveSolutionToDB.apply(this, arguments);
-}
-
 function getCompetitions() {
   return _getCompetitions.apply(this, arguments);
 }
@@ -63862,19 +63840,19 @@ function getCompetitions() {
 function _getCompetitions() {
   _getCompetitions = _asyncToGenerator(
   /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee2() {
+  _regeneratorRuntime.mark(function _callee() {
     var snapshot, data;
-    return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+    return _regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context.prev = _context.next) {
           case 0:
-            _context2.next = 2;
+            _context.next = 2;
             return competitionsRef.orderBy('number').get();
 
           case 2:
-            snapshot = _context2.sent;
+            snapshot = _context.sent;
             data = [];
-            _context2.next = 6;
+            _context.next = 6;
             return snapshot.forEach(function (doc) {
               var docData = doc.data();
               data.push({
@@ -63888,14 +63866,14 @@ function _getCompetitions() {
             });
 
           case 6:
-            return _context2.abrupt("return", data);
+            return _context.abrupt("return", data);
 
           case 7:
           case "end":
-            return _context2.stop();
+            return _context.stop();
         }
       }
-    }, _callee2);
+    }, _callee);
   }));
   return _getCompetitions.apply(this, arguments);
 }

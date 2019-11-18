@@ -17,14 +17,6 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 const competitionsRef = db.collection('competitions');
 
-async function saveSolutionToDB() {
-
-
-
-}
-
-// let snapshot = await usersRef.where('email', '==', email).get()
-
 async function getCompetitions() {
   let snapshot = await competitionsRef.orderBy('number').get()
   let data = []
