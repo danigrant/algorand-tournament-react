@@ -1,3 +1,4 @@
+import Link from 'next/link'
 const competitions = [
   {
     "number":6,
@@ -46,12 +47,16 @@ const competitions = [
 
 const CompetitionsGrid = props => {
   return (
-    <div>
+    <div className="competition-grid-wrapper margin-top-lrg">
     {
       competitions.map(c => {
         return (
-          <div className="background-light-blue green-border rounded-border">
-            <p className="font-color-grey"></p>
+          <div className="competition-card background-light-blue green-border rounded-border margin-bottom-med">
+            <p className="font-color-grey"><span className="font-color-yellow font-weight-bold">{c.number}</span> = a³ + b³ + c³</p>
+            <p className="font-color-grey">Prize Pool: <span className="font-color-white">0 Algos</span></p>
+            <p className="margin-bottom-none font-color-yellow font-size-sml">74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9</p>
+            <p className="margin-top-none font-color-grey font-size-sml">send algos to this addr to increase the prize pool</p>
+            <p className="font-color-grey link">Submit Answer ></p>
           </div>
         )
       })

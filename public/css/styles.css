@@ -6,4 +6,26 @@ body {
   font-family: IBM Plex Mono;
   background-image: linear-gradient(180deg, #313745 0%, #001025 100%);
   color: white;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  line-height: 150%;
+}
+
+.competition-grid-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.competition-card {
+  width: 320px;
+  height: 200px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 20px;
 }
