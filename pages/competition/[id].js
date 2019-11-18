@@ -6,7 +6,7 @@ import { withRouter } from 'next/router'
 class SubmitSolutionPage extends React.Component {
   constructor(props) {
     super(props)
-    const { router } = this.props
+    const { router } = this.props 
     this.state = {
       isSubmitted: false,
       selectedCompetition: router.query.id,

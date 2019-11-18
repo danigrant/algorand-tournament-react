@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import YouTube from 'react-youtube';
 
 const Learn = props => {
+  const { router } = this.props
   return (
     <div>
       <Header />
@@ -24,4 +25,4 @@ const Learn = props => {
   )
 }
 
-export default Learn
+export default withRouter(Learn)
