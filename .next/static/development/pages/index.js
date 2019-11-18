@@ -238,7 +238,7 @@ var Header = function Header(props) {
     },
     __self: this
   }, "Submit Answer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "leaderboard",
+    href: "/leaderboard/hooray",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15

@@ -12,7 +12,7 @@ const Header = props => (
       <Link href="/competition/6">
         <div className="link inline-block margin-right-med">Submit Answer</div>
       </Link>
-      <Link href="leaderboard">
+      <Link href="/leaderboard/hooray">
         <div className="link inline-block margin-right-med">Leaderboard</div>
       </Link>
     </div>

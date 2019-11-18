@@ -1,7 +1,9 @@
 import AppContainer from '../components/AppContainer'
 import Header from '../components/Header'
+import { withRouter } from 'next/router'
 
 const Leaderboard = props => {
+  const { router } = props
   return (
     <div>
       <Header />
@@ -22,4 +24,4 @@ const Leaderboard = props => {
   )
 }
 
-export default Leaderboard
+export default withRouter(Leaderboard)
