@@ -28,9 +28,9 @@ class SubmitSolutionPage extends React.Component {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
-        a: this.state.integerA,
-        b: this.state.integerB,
-        c: this.state.integerC,
+        a: `${this.state.integerA}`,
+        b: `${this.state.integerB}`,
+        c: `${this.state.integerC}`,
         algorandAddress: this.state.algorandAddress,
         submitterName: this.state.submitterName,
         submitterEmail: this.state.submitterEmail

@@ -63773,23 +63773,29 @@ function (_React$Component) {
           lineNumber: 27
         },
         __self: this
-      }, "Diophantine Equations take the form a\xB3 + b\xB3 + c\xB3 = d. There are known diophantine equations for most real numbers under 1,000 (or it is known that there is no solution for that number). There are only 10 left to be solved."), __jsx("p", {
+      }, "Almost every number can be expressed as the sum of three cubes. Some solutions are small: 29 is 3\xB3 + 1\xB3 + 1\xB3. Some solutions are big: 33 is 2,220,422,932\xB3 + (-2,218,888,517)\xB3 + (-283,059,965)\xB3."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
         },
         __self: this
-      }, "In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct diophantine equation to each address gets all of the algos in the contract."), __jsx("p", {
+      }, "Because of how big some of the numbers in these solutions are, we are only discovering the sum of three cubes for various integers now, though humans have been searching for them for 70+ years."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
+        },
+        __self: this
+      }, "There are only ten integers below 1,000 that we are still missing answers to. In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct solution gets all of the algos in the contract."), __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
         },
         __self: this
       }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), this.state.competitions.length > 0 && __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_10__["default"], {
         competitions: this.state.competitions,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       })));
@@ -63884,7 +63890,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdanigrant%2FProjects%2Falgorand-react%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************/
@@ -63907,5 +63913,5 @@ module.exports = dll_9aaf654d4f8f592c0a05;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
