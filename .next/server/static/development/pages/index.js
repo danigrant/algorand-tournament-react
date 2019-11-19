@@ -191,7 +191,7 @@ const CompetitionsGrid = props => {
         lineNumber: 12
       },
       __self: undefined
-    }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
+    }, c.algorandEscrowAddress), __jsx("p", {
       className: "margin-top-none font-color-grey font-size-sml",
       __source: {
         fileName: _jsxFileName,
