@@ -2231,7 +2231,7 @@ async function getAlgorandAddressBalance(addr) {
     }
   });
   let json = await res.json();
-  return Math.round(json.amount / 100000); // json.amount is in microalgos, 100k microalgos is 1 algo
+  return Math.round(json.amount / 100000).toLocaleString('en-US'); // json.amount is in microalgos, 100k microalgos is 1 algo
 }
 
 module.exports = {

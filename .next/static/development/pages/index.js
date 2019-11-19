@@ -63841,7 +63841,7 @@ function _getAlgorandAddressBalance() {
 
           case 5:
             json = _context.sent;
-            return _context.abrupt("return", Math.round(json.amount / 100000));
+            return _context.abrupt("return", Math.round(json.amount / 100000).toLocaleString('en-US'));
 
           case 7:
           case "end":
