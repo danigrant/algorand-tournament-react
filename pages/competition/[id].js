@@ -88,6 +88,7 @@ class SubmitSolutionPage extends React.Component {
             <form>
               <p className="margin-top-med font-weight-bold">Which integer are you submitting a solution for?</p>
               <select onChange={this.handleCompetitionSelectChange} name="competition-select">
+                <option selected={this.state.selectedCompetition == 6} value="6">6</option>
                 <option selected={this.state.selectedCompetition == 42} value="42">42</option>
                 <option selected={this.state.selectedCompetition == 114} value="114">114</option>
                 <option selected={this.state.selectedCompetition == 165} value="165">165</option>
