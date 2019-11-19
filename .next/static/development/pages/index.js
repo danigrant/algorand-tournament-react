@@ -49,12 +49,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var CompetitionsGrid = function CompetitionsGrid(props) {
-  console.log('CompetitionsGrid.js', props.competitions);
   return __jsx("div", {
     className: "competition-grid-wrapper margin-top-lrg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 5
     },
     __self: this
   }, props.competitions.map(function (c, index) {
@@ -63,63 +62,63 @@ var CompetitionsGrid = function CompetitionsGrid(props) {
       className: "competition-card background-light-blue green-border rounded-border margin-bottom-med",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
     }, __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       },
       __self: this
     }, __jsx("span", {
       className: "font-color-yellow font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       },
       __self: this
     }, c.number), " = a\xB3 + b\xB3 + c\xB3"), __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 11
       },
       __self: this
     }, "Prize Pool: ", __jsx("span", {
       className: "font-color-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 11
       },
       __self: this
     }, c.balance, " Algos")), __jsx("p", {
       className: "margin-bottom-none font-color-yellow font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 12
       },
       __self: this
     }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
       className: "margin-top-none font-color-grey font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 13
       },
       __self: this
     }, "send algos to this addr to increase the prize pool"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/competition/".concat(c.number),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 14
       },
       __self: this
     }, __jsx("p", {
       className: "font-color-grey link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 15
       },
       __self: this
     }, "Submit Answer >")));
@@ -63719,11 +63718,7 @@ function (_React$Component) {
 
                 _context.t0.setState.call(_context.t0, _context.t2);
 
-                console.log(this.state.competitions); // this prints an array of length 11
-
-                console.log(this.state.competitions.length); // this prints 0
-
-              case 8:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -63743,64 +63738,58 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         },
         __self: this
       }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 23
         },
         __self: this
       }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
       }, __jsx("div", {
         className: "constrained-width-sml center-on-desktop-not-mobile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       }, __jsx("p", {
         className: "margin-top-lrg font-weight-bold font-color-green",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         },
         __self: this
       }, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, "Almost every number can be expressed as the sum of three cubes. Some solutions are small: 29 is 3\xB3 + 1\xB3 + 1\xB3. Some solutions are big: 33 is 2,220,422,932\xB3 + (-2,218,888,517)\xB3 + (-283,059,965)\xB3."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 28
         },
         __self: this
-      }, "Because of how big some of the numbers in these solutions are, we are only discovering the sum of three cubes for various integers now, though humans have been searching for them for 70+ years."), __jsx("p", {
+      }, "There are only ten integers below 1,000 that we are still missing solutions to. In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct solution gets all of the algos in the contract."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, "There are only ten integers below 1,000 that we are still missing answers to. In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct solution gets all of the algos in the contract."), __jsx("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 29
         },
         __self: this
       }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), this.state.competitions.length > 0 && __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_10__["default"], {
         competitions: this.state.competitions,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 33
         },
         __self: this
       })));
@@ -63852,7 +63841,7 @@ function _getAlgorandAddressBalance() {
 
           case 5:
             json = _context.sent;
-            return _context.abrupt("return", json.amount * 100000);
+            return _context.abrupt("return", Math.round(json.amount / 100000));
 
           case 7:
           case "end":
@@ -63881,6 +63870,10 @@ module.exports = {
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
+
+var _assign = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js"));
 
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
 
@@ -63914,19 +63907,19 @@ function getCompetitions() {
 function _getCompetitions() {
   _getCompetitions = (0, _asyncToGenerator2["default"])(
   /*#__PURE__*/
-  _regenerator["default"].mark(function _callee2() {
+  _regenerator["default"].mark(function _callee3() {
     var snapshot, data;
-    return _regenerator["default"].wrap(function _callee2$(_context2) {
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context3.prev = _context3.next) {
           case 0:
-            _context2.next = 2;
+            _context3.next = 2;
             return competitionsRef.orderBy('number').get();
 
           case 2:
-            snapshot = _context2.sent;
+            snapshot = _context3.sent;
             data = [];
-            _context2.next = 6;
+            _context3.next = 6;
             return snapshot.forEach(
             /*#__PURE__*/
             function () {
@@ -63938,20 +63931,18 @@ function _getCompetitions() {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
-                        docData = doc.data(); // get balance of that address
-                        // let algoBalance = await getAlgorandAddressBalance(docData.algorandEscrowAddress)
-
-                        data.push({
+                        docData = doc.data();
+                        _context.next = 3;
+                        return data.push({
                           "number": docData.number,
                           "algorandEscrowAddress": docData.algorandEscrowAddress,
-                          // "balance": algoBalance,
                           "isSolved": docData.isSolved,
                           "solverName": docData.solverName ? docData.solverName : undefined,
                           "solution": docData.solution ? docData.solution : {},
                           "solveDate": docData.solveDate ? docData.solveDate : undefined
                         });
 
-                      case 2:
+                      case 3:
                       case "end":
                         return _context.stop();
                     }
@@ -63965,14 +63956,64 @@ function _getCompetitions() {
             }());
 
           case 6:
-            return _context2.abrupt("return", data);
+            _context3.next = 8;
+            return data.forEach(
+            /*#__PURE__*/
+            function () {
+              var _ref2 = (0, _asyncToGenerator2["default"])(
+              /*#__PURE__*/
+              _regenerator["default"].mark(function _callee2(escrowAccount, index) {
+                var algoBalance;
+                return _regenerator["default"].wrap(function _callee2$(_context2) {
+                  while (1) {
+                    switch (_context2.prev = _context2.next) {
+                      case 0:
+                        _context2.next = 2;
+                        return (0, _algorand.getAlgorandAddressBalance)(escrowAccount.algorandEscrowAddress);
 
-          case 7:
+                      case 2:
+                        algoBalance = _context2.sent;
+                        (0, _assign["default"])(data[index], {
+                          balance: algoBalance
+                        });
+
+                      case 4:
+                      case "end":
+                        return _context2.stop();
+                    }
+                  }
+                }, _callee2);
+              }));
+
+              return function (_x2, _x3) {
+                return _ref2.apply(this, arguments);
+              };
+            }());
+
+          case 8:
+            if (data[0].balance) {
+              _context3.next = 11;
+              break;
+            }
+
+            _context3.next = 11;
+            return new _promise["default"](function (cb) {
+              return setTimeout(cb, 800);
+            });
+
+          case 11:
+            console.log('in getCompetitions: ', data[3]); // this prints the balance correctly
+
+            console.log('in getCompetitions: ', data[3].balance); // this prints undefined (unless i wait a whole second)
+
+            return _context3.abrupt("return", data);
+
+          case 14:
           case "end":
-            return _context2.stop();
+            return _context3.stop();
         }
       }
-    }, _callee2);
+    }, _callee3);
   }));
   return _getCompetitions.apply(this, arguments);
 }
@@ -63983,7 +64024,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdanigrant%2FProjects%2Falgorand-react%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************/
@@ -64006,5 +64047,5 @@ module.exports = dll_9aaf654d4f8f592c0a05;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

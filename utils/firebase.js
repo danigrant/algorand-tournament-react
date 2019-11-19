@@ -24,20 +24,28 @@ async function getCompetitions() {
   await snapshot.forEach(async (doc) => {
     let docData = doc.data()
 
-    // get balance of that address
-    // let algoBalance = await getAlgorandAddressBalance(docData.algorandEscrowAddress)
-
-    data.push({
+    await data.push({
       "number": docData.number,
   		"algorandEscrowAddress": docData.algorandEscrowAddress,
-      // "balance": algoBalance,
-      "balance": 0,
   		"isSolved": docData.isSolved,
       "solverName": docData.solverName ? docData.solverName : undefined,
       "solution": docData.solution ? docData.solution : {},
       "solveDate": docData.solveDate ? docData.solveDate : undefined
     })
   })
+
+  // now get balances
+  await data.forEach(async (escrowAccount, index) => {
+    let algoBalance = await getAlgorandAddressBalance(escrowAccount.algorandEscrowAddress)
+    Object.assign(data[index], { balance: algoBalance })
+  })
+
+  if (!data[0].balance) {
+    await new Promise(cb => setTimeout(cb, 800))
+  }
+
+  console.log('in getCompetitions: ', data[3]); // this prints the balance correctly
+  console.log('in getCompetitions: ', data[3].balance); // this prints undefined (unless i wait a whole second)
   return data
 }
 

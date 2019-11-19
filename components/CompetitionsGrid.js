@@ -1,8 +1,6 @@
 import Link from 'next/link'
 
 const CompetitionsGrid = props => {
-  console.log('CompetitionsGrid.js', props.competitions);
-
   return (
     <div className="competition-grid-wrapper margin-top-lrg">
     {
