@@ -31,6 +31,7 @@ async function getCompetitions() {
       "number": docData.number,
   		"algorandEscrowAddress": docData.algorandEscrowAddress,
       // "balance": algoBalance,
+      "balance": 0,
   		"isSolved": docData.isSolved,
       "solverName": docData.solverName ? docData.solverName : undefined,
       "solution": docData.solution ? docData.solution : {},
