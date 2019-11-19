@@ -16,6 +16,8 @@ class Index extends React.Component {
     this.setState({
       competitions: await getCompetitions()
     })
+    console.log(this.state.competitions); // this prints an array of length 11
+    console.log(this.state.competitions.length); // this prints 0
   }
   render() {
     return (

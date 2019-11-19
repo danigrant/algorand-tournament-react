@@ -20,19 +20,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/competition/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/leaderboard/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/learn/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

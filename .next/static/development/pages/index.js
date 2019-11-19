@@ -49,11 +49,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var CompetitionsGrid = function CompetitionsGrid(props) {
+  console.log('CompetitionsGrid.js', props.competitions);
   return __jsx("div", {
     className: "competition-grid-wrapper margin-top-lrg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: this
   }, props.competitions.map(function (c, index) {
@@ -62,63 +63,63 @@ var CompetitionsGrid = function CompetitionsGrid(props) {
       className: "competition-card background-light-blue green-border rounded-border margin-bottom-med",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       },
       __self: this
     }, __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       },
       __self: this
     }, __jsx("span", {
       className: "font-color-yellow font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       },
       __self: this
     }, c.number), " = a\xB3 + b\xB3 + c\xB3"), __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: this
     }, "Prize Pool: ", __jsx("span", {
       className: "font-color-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: this
-    }, "0 Algos")), __jsx("p", {
+    }, c.balance, " Algos")), __jsx("p", {
       className: "margin-bottom-none font-color-yellow font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       },
       __self: this
     }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
       className: "margin-top-none font-color-grey font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 15
       },
       __self: this
     }, "send algos to this addr to increase the prize pool"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/competition/".concat(c.number),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 16
       },
       __self: this
     }, __jsx("p", {
       className: "font-color-grey link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 17
       },
       __self: this
     }, "Submit Answer >")));
@@ -63718,7 +63719,11 @@ function (_React$Component) {
 
                 _context.t0.setState.call(_context.t0, _context.t2);
 
-              case 6:
+                console.log(this.state.competitions); // this prints an array of length 11
+
+                console.log(this.state.competitions.length); // this prints 0
+
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -63738,64 +63743,64 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         },
         __self: this
       }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 25
         },
         __self: this
       }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: "constrained-width-sml center-on-desktop-not-mobile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 27
         },
         __self: this
       }, __jsx("p", {
         className: "margin-top-lrg font-weight-bold font-color-green",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         },
         __self: this
       }, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 29
         },
         __self: this
       }, "Almost every number can be expressed as the sum of three cubes. Some solutions are small: 29 is 3\xB3 + 1\xB3 + 1\xB3. Some solutions are big: 33 is 2,220,422,932\xB3 + (-2,218,888,517)\xB3 + (-283,059,965)\xB3."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 30
         },
         __self: this
       }, "Because of how big some of the numbers in these solutions are, we are only discovering the sum of three cubes for various integers now, though humans have been searching for them for 70+ years."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         },
         __self: this
       }, "There are only ten integers below 1,000 that we are still missing answers to. In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct solution gets all of the algos in the contract."), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 32
         },
         __self: this
       }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), this.state.competitions.length > 0 && __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_10__["default"], {
         competitions: this.state.competitions,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 36
         },
         __self: this
       })));
@@ -63809,9 +63814,9 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./utils/firebase.js":
+/***/ "./utils/algorand.js":
 /*!***************************!*\
-  !*** ./utils/firebase.js ***!
+  !*** ./utils/algorand.js ***!
   \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -63819,6 +63824,69 @@ function (_React$Component) {
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _asyncToGenerator = __webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js");
+
+function getAlgorandAddressBalance(_x) {
+  return _getAlgorandAddressBalance.apply(this, arguments);
+}
+
+function _getAlgorandAddressBalance() {
+  _getAlgorandAddressBalance = _asyncToGenerator(
+  /*#__PURE__*/
+  _regeneratorRuntime.mark(function _callee(addr) {
+    var res, json;
+    return _regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch("https://betanet-algorand.api.purestake.io/ps1/v1/account/".concat(addr), {
+              headers: {
+                'x-api-key': "Cg7ZP9p6rg4QucM4qk4629PounRBXkfh60Wvkj39"
+              }
+            });
+
+          case 2:
+            res = _context.sent;
+            _context.next = 5;
+            return res.json();
+
+          case 5:
+            json = _context.sent;
+            return _context.abrupt("return", json.amount * 100000);
+
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _getAlgorandAddressBalance.apply(this, arguments);
+}
+
+module.exports = {
+  getAlgorandAddressBalance: getAlgorandAddressBalance
+};
+
+/***/ }),
+
+/***/ "./utils/firebase.js":
+/*!***************************!*\
+  !*** ./utils/firebase.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js"));
+
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js"));
+
+var _algorand = __webpack_require__(/*! ./algorand */ "./utils/algorand.js");
 
 var firebase = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
 
@@ -63844,42 +63912,67 @@ function getCompetitions() {
 }
 
 function _getCompetitions() {
-  _getCompetitions = _asyncToGenerator(
+  _getCompetitions = (0, _asyncToGenerator2["default"])(
   /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee() {
+  _regenerator["default"].mark(function _callee2() {
     var snapshot, data;
-    return _regeneratorRuntime.wrap(function _callee$(_context) {
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
-        switch (_context.prev = _context.next) {
+        switch (_context2.prev = _context2.next) {
           case 0:
-            _context.next = 2;
+            _context2.next = 2;
             return competitionsRef.orderBy('number').get();
 
           case 2:
-            snapshot = _context.sent;
+            snapshot = _context2.sent;
             data = [];
-            _context.next = 6;
-            return snapshot.forEach(function (doc) {
-              var docData = doc.data();
-              data.push({
-                "number": docData.number,
-                "algorandEscrowAddress": docData.algorandEscrowAddress,
-                "isSolved": docData.isSolved,
-                "solverName": docData.solverName ? docData.solverName : undefined,
-                "solution": docData.solution ? docData.solution : {},
-                "solveDate": docData.solveDate ? docData.solveDate : undefined
-              });
-            });
+            _context2.next = 6;
+            return snapshot.forEach(
+            /*#__PURE__*/
+            function () {
+              var _ref = (0, _asyncToGenerator2["default"])(
+              /*#__PURE__*/
+              _regenerator["default"].mark(function _callee(doc) {
+                var docData;
+                return _regenerator["default"].wrap(function _callee$(_context) {
+                  while (1) {
+                    switch (_context.prev = _context.next) {
+                      case 0:
+                        docData = doc.data(); // get balance of that address
+                        // let algoBalance = await getAlgorandAddressBalance(docData.algorandEscrowAddress)
+
+                        data.push({
+                          "number": docData.number,
+                          "algorandEscrowAddress": docData.algorandEscrowAddress,
+                          // "balance": algoBalance,
+                          "isSolved": docData.isSolved,
+                          "solverName": docData.solverName ? docData.solverName : undefined,
+                          "solution": docData.solution ? docData.solution : {},
+                          "solveDate": docData.solveDate ? docData.solveDate : undefined
+                        });
+
+                      case 2:
+                      case "end":
+                        return _context.stop();
+                    }
+                  }
+                }, _callee);
+              }));
+
+              return function (_x) {
+                return _ref.apply(this, arguments);
+              };
+            }());
 
           case 6:
-            return _context.abrupt("return", data);
+            return _context2.abrupt("return", data);
 
           case 7:
           case "end":
-            return _context.stop();
+            return _context2.stop();
         }
       }
-    }, _callee);
+    }, _callee2);
   }));
   return _getCompetitions.apply(this, arguments);
 }
@@ -63890,7 +63983,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdanigrant%2FProjects%2Falgorand-react%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************/
@@ -63913,5 +64006,5 @@ module.exports = dll_9aaf654d4f8f592c0a05;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -140,11 +140,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const CompetitionsGrid = props => {
+  console.log('CompetitionsGrid.js', props.competitions);
   return __jsx("div", {
     className: "competition-grid-wrapper margin-top-lrg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: undefined
   }, props.competitions.map((c, index) => {
@@ -153,63 +154,63 @@ const CompetitionsGrid = props => {
       className: "competition-card background-light-blue green-border rounded-border margin-bottom-med",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       },
       __self: undefined
     }, __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       },
       __self: undefined
     }, __jsx("span", {
       className: "font-color-yellow font-weight-bold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       },
       __self: undefined
     }, c.number), " = a\xB3 + b\xB3 + c\xB3"), __jsx("p", {
       className: "font-color-grey",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: undefined
     }, "Prize Pool: ", __jsx("span", {
       className: "font-color-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: undefined
-    }, "0 Algos")), __jsx("p", {
+    }, c.balance, " Algos")), __jsx("p", {
       className: "margin-bottom-none font-color-yellow font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       },
       __self: undefined
     }, "74d1091b66c0e09678687a7d443be273bd2c9514e5c7cb9"), __jsx("p", {
       className: "margin-top-none font-color-grey font-size-sml",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 15
       },
       __self: undefined
     }, "send algos to this addr to increase the prize pool"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: `/competition/${c.number}`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 16
       },
       __self: undefined
     }, __jsx("p", {
       className: "font-color-grey link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 17
       },
       __self: undefined
     }, "Submit Answer >")));
@@ -2148,70 +2149,73 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     this.setState({
       competitions: await Object(_utils_firebase__WEBPACK_IMPORTED_MODULE_5__["getCompetitions"])()
     });
+    console.log(this.state.competitions); // this prints an array of length 11
+
+    console.log(this.state.competitions.length); // this prints 0
   }
 
   render() {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 24
       },
       __self: this
     }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 25
       },
       __self: this
     }), __jsx(_components_AppContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 26
       },
       __self: this
     }, __jsx("div", {
       className: "constrained-width-sml center-on-desktop-not-mobile",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 27
       },
       __self: this
     }, __jsx("p", {
       className: "margin-top-lrg font-weight-bold font-color-green",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 28
       },
       __self: this
     }, "A Number Theory Tournament Built On Algorand"), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 29
       },
       __self: this
     }, "Almost every number can be expressed as the sum of three cubes. Some solutions are small: 29 is 3\xB3 + 1\xB3 + 1\xB3. Some solutions are big: 33 is 2,220,422,932\xB3 + (-2,218,888,517)\xB3 + (-283,059,965)\xB3."), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 30
       },
       __self: this
     }, "Because of how big some of the numbers in these solutions are, we are only discovering the sum of three cubes for various integers now, though humans have been searching for them for 70+ years."), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 31
       },
       __self: this
     }, "There are only ten integers below 1,000 that we are still missing answers to. In this tournament, there are 10 escrow Algorand contracts, one for each unsolved number. The first person to submit a correct solution gets all of the algos in the contract."), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 32
       },
       __self: this
     }, "To encourage mathematical research and raise the stakes, send some algos to the addresses of the escrow contracts.")), this.state.competitions.length > 0 && __jsx(_components_CompetitionsGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
       competitions: this.state.competitions,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 36
       },
       __self: this
     })));
@@ -2223,12 +2227,40 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 /***/ }),
 
+/***/ "./utils/algorand.js":
+/*!***************************!*\
+  !*** ./utils/algorand.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+async function getAlgorandAddressBalance(addr) {
+  let res = await fetch(`https://betanet-algorand.api.purestake.io/ps1/v1/account/${addr}`, {
+    headers: {
+      'x-api-key': "Cg7ZP9p6rg4QucM4qk4629PounRBXkfh60Wvkj39"
+    }
+  });
+  let json = await res.json();
+  return json.amount * 100000; // json.amount is in microalgos, 100k microalgos is 1 algo
+}
+
+module.exports = {
+  getAlgorandAddressBalance
+};
+
+/***/ }),
+
 /***/ "./utils/firebase.js":
 /*!***************************!*\
   !*** ./utils/firebase.js ***!
   \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _algorand = __webpack_require__(/*! ./algorand */ "./utils/algorand.js");
 
 const firebase = __webpack_require__(/*! firebase */ "firebase");
 
@@ -2252,11 +2284,14 @@ const competitionsRef = db.collection('competitions');
 async function getCompetitions() {
   let snapshot = await competitionsRef.orderBy('number').get();
   let data = [];
-  await snapshot.forEach(doc => {
-    let docData = doc.data();
+  await snapshot.forEach(async doc => {
+    let docData = doc.data(); // get balance of that address
+    // let algoBalance = await getAlgorandAddressBalance(docData.algorandEscrowAddress)
+
     data.push({
       "number": docData.number,
       "algorandEscrowAddress": docData.algorandEscrowAddress,
+      // "balance": algoBalance,
       "isSolved": docData.isSolved,
       "solverName": docData.solverName ? docData.solverName : undefined,
       "solution": docData.solution ? docData.solution : {},
@@ -2272,7 +2307,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

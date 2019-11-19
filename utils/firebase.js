@@ -1,4 +1,5 @@
 const firebase = require('firebase')
+import { getAlgorandAddressBalance } from './algorand'
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -20,11 +21,16 @@ const competitionsRef = db.collection('competitions');
 async function getCompetitions() {
   let snapshot = await competitionsRef.orderBy('number').get()
   let data = []
-  await snapshot.forEach(doc => {
+  await snapshot.forEach(async (doc) => {
     let docData = doc.data()
+
+    // get balance of that address
+    // let algoBalance = await getAlgorandAddressBalance(docData.algorandEscrowAddress)
+
     data.push({
       "number": docData.number,
   		"algorandEscrowAddress": docData.algorandEscrowAddress,
+      // "balance": algoBalance,
   		"isSolved": docData.isSolved,
       "solverName": docData.solverName ? docData.solverName : undefined,
       "solution": docData.solution ? docData.solution : {},
