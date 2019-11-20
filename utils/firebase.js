@@ -37,7 +37,8 @@ async function getCompetitions() {
   // now get balances
   await data.forEach(async (escrowAccount, index) => {
     let algoBalance = await getAlgorandAddressBalance(escrowAccount.algorandEscrowAddress)
-    Object.assign(data[index], { balance: algoBalance })
+    data[index] = { ...data[index], balance: algoBalance }
+    // Object.assign(data[index], { balance: algoBalance })
   })
 
   if (!data[0].balance) {
